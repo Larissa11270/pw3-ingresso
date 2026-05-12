@@ -1,5 +1,6 @@
 package br.com.etechoracio.ingresso.service;
 
+import br.com.etechoracio.ingresso.dto.FilmeResponseDTO;
 import br.com.etechoracio.ingresso.entity.Filme;
 import br.com.etechoracio.ingresso.repository.FilmeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,8 @@ public class FilmeService {
     @Autowired
     private FilmeRepository filmeRepository;
 
-    public List<Filme> findAll(){
-        return filmeRepository.findAll();
-    }
+   public List<FilmeResponseDTO> findAll(){
+       var filmes = filmeRepository.findAll();
+       return null;
+   }
 }

@@ -1,5 +1,6 @@
 package br.com.etechoracio.ingresso.controller;
 
+import br.com.etechoracio.ingresso.dto.FilmeResponseDTO;
 import br.com.etechoracio.ingresso.entity.Filme;
 import br.com.etechoracio.ingresso.service.FilmeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ public class FilmeController {
     private FilmeService filmeService;
 
     @GetMapping
-    public List<Filme> findAll(){
+    public List<FilmeResponseDTO> findAll(){
         return filmeService.findAll();
     }
 }
